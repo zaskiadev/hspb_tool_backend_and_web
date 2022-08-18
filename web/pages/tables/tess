@@ -1,0 +1,24 @@
+<table border="1">
+  <tr>
+    <th>NO KAMAR</th>
+    <th>LAST DATE EXECUTED</th>
+    <th>NEXT DATE EXECUTED</th>
+  </tr>
+  <?php
+
+	mysql_connect("localhost", "root", "!TS3l4lu0nc4ll");
+	mysql_select_db("hspb_tool");
+
+	$sql = mysql_query("SELECT * FROM batery_kamar ORDER BY no_kamar ASC");
+
+	while($data = mysql_fetch_assoc($sql)){
+	echo '
+		<tr>
+  <td>'.$data['no_kamar'].'</td>
+  <td>'.$data['last_change_battery'].'</td>
+  <td>'.$data['next_change_battery'].'</td>
+  </tr>
+  ';
+  }
+  ?>
+</table>

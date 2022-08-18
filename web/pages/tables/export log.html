@@ -1,0 +1,78 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Export Data</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <form action="data_tap_time_card.php" method="get">
+            <div class="form-group">
+
+              <label for="exampleSelectBorder">Select Filter</label>
+              <select class="custom-select form-control-border" name="filter_by" id="exampleSelectBorder">
+                <option value="all">All</option>
+                <option value="never_execute">Never Execute</option>
+                <option value="urgent_to_execute">Urgent To Execute</option>
+                <option value="already_execute">Already Execute</option>
+              </select>
+
+            </div>
+            <button type="submit" class="btn btn-info">Export To Excel</button>
+          </form>
+
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+
+
+      <!-- /.card -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Export Data Log</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <form action="data_tap_time_card.php" method="get">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+
+                  <label for="dataLog">Select Filter</label>
+                  <select class="custom-select form-control-border" name="filter_by" id="dataLog">
+                    <option value="all_log">All Log</option>
+                    <option value="room_number_log">Room Number</option>
+                  </select>
+
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="dataLog">Room Number</label>
+                <input type="text" class="form-control" placeholder="enter room number" name="room_number_search_log">
+              </div>
+
+            </div>
+
+
+            <button type="submit" class="btn btn-info">Export To Excel</button>
+          </form>
+
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+
+
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+
+
+  <!-- /.row -->
+</div><!-- /.container-fluid -->
